@@ -26,3 +26,16 @@ what ships with Quartus (22.1.2) exactly.
 Addons: After found this package on github I add re-package script make_x64.sh for windows 11 64-bit.
 Run the build script as shown:
   $ make_x64.sh <X64.zip>
+
+Important note: on Windows 11 you need to switch off certificate checking, for example run in admin console:
+
+for switching off driver signatures:
+    bcdedit.exe -set loadoptions DISABLE_INTEGRITY_CHECKS
+    bcdedit.exe -set TESTSIGNING ON
+    bcdedit.exe -set NOINTEGRITYCHECKS ON
+    Shutdown -f -r -t 0
+
+for switching on driver signatures:
+    bcdedit.exe -set loadoptions ENABLE_INTEGRITY_CHECKS
+    bcdedit.exe -set TESTSIGNING OFF
+    bcdedit.exe -set NOINTEGRITYCHECKS OFF
