@@ -22,3 +22,7 @@ You can find pre-packaged drivers in "Releases" if you trust me.
 This was last tested with FTDI driver versions 2.12.21 (X64) and 2.12.36.4
 (ARM64) and is the recommended configuration since the X64 portions will match
 what ships with Quartus (22.1.2) exactly.
+
+Addons: After found this package on github I add re-package script make_x64.sh for windows 11 64-bit.
+Run the build script as shown:
+  $ make_x64.sh <X64.zip>
